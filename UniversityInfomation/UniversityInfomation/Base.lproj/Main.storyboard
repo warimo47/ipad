@@ -31,24 +31,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="경기도 대학" id="n57-lM-z45">
-                        <barButtonItem key="leftBarButtonItem" title="메인 화면" style="plain" id="fLC-YA-C2v">
+                        <barButtonItem key="leftBarButtonItem" title="메인 화면" style="plain" id="8Re-ZH-2Tz"/>
+                        <barButtonItem key="rightBarButtonItem" title="대학 선택" style="plain" id="cf3-yy-fKq">
                             <connections>
-                                <action selector="goBack" destination="dkx-z0-nzr" id="g80-T3-yVT"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="SCx-lf-Cwp">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uEw-vG-Ou9">
-                                <rect key="frame" x="578" y="7" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="선택"/>
-                            </button>
-                            <connections>
-                                <segue destination="yLC-gw-ukQ" kind="show" id="I3I-kf-tNe"/>
+                                <segue destination="yLC-gw-ukQ" kind="show" id="uHF-HK-8H5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="OutletBackToMain" destination="fLC-YA-C2v" id="KfH-qe-8Dc"/>
                         <outlet property="PickerView" destination="yFP-uI-3HQ" id="5n8-pc-xTU"/>
                     </connections>
                 </viewController>
@@ -85,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="3789.84375" y="131.8359375"/>
         </scene>
-        <!--View Controller-->
+        <!--경기도 대학 정보 조회-->
         <scene sceneID="1Z9-AZ-t83">
             <objects>
                 <viewController id="FDH-GP-xbT" sceneMemberID="viewController">
@@ -97,20 +87,20 @@
                                 <rect key="frame" x="184" y="421" width="400" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="대학 검색"/>
+                                <state key="normal" title="지역 검색"/>
                                 <connections>
-                                    <segue destination="jKh-gC-YlL" kind="show" identifier="segueToPickerView" id="USQ-0u-I43"/>
+                                    <segue destination="jKh-gC-YlL" kind="show" identifier="segueToPickerView" id="t7F-KR-Kvs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mOk-ui-aWZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tJb-iZ-h1L"/>
+                    <navigationItem key="navigationItem" title="경기도 대학 정보 조회" id="tJb-iZ-h1L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FU1-Yb-TOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610.9375" y="131.8359375"/>
+            <point key="canvasLocation" x="248" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="69A-qP-Ibk">
@@ -128,7 +118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMg-4U-CNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1331.25" y="131.8359375"/>
+            <point key="canvasLocation" x="1147" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uh5-2n-hrs">
@@ -146,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa8-By-GOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154.6875" y="131.8359375"/>
+            <point key="canvasLocation" x="-637" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="De7-Pf-4Kb">
@@ -164,7 +154,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkc-HI-po0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3023.4375" y="131.8359375"/>
+            <point key="canvasLocation" x="2912" y="131"/>
         </scene>
     </scenes>
 </document>
