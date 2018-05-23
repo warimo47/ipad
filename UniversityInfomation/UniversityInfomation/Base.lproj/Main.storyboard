@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--경기도 대학-->
+        <!--경기도 대학이 있는 지역 리스트-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PickerViewController" customModule="UniversityInfomation" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,11 +30,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="경기도 대학" id="n57-lM-z45">
-                        <barButtonItem key="leftBarButtonItem" title="메인 화면" style="plain" id="8Re-ZH-2Tz"/>
-                        <barButtonItem key="rightBarButtonItem" title="대학 선택" style="plain" id="cf3-yy-fKq">
+                    <navigationItem key="navigationItem" title="경기도 대학이 있는 지역 리스트" id="n57-lM-z45">
+                        <barButtonItem key="leftBarButtonItem" title="메인 화면" id="nbi-32-46G">
                             <connections>
-                                <segue destination="yLC-gw-ukQ" kind="show" id="uHF-HK-8H5"/>
+                                <segue destination="fgl-If-x5Y" kind="unwind" identifier="" unwindAction="backToViewControllerWithSegue:" id="kLm-bK-M9u"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="지역 선택" id="33N-vA-nE6">
+                            <connections>
+                                <segue destination="yLC-gw-ukQ" kind="show" identifier="sequeToUniversityList" id="d2s-N4-wEt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -43,13 +47,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="fgl-If-x5Y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2030.46875" y="131.8359375"/>
         </scene>
-        <!--대학 세부 정보-->
+        <!--대학교 리스트-->
         <scene sceneID="8hp-sT-DF0">
             <objects>
-                <tableViewController id="Thf-Av-Kai" sceneMemberID="viewController">
+                <tableViewController id="Thf-Av-Kai" customClass="TableViewController" customModule="UniversityInfomation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VwP-KX-uDK">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,16 +74,23 @@
                             <outlet property="delegate" destination="Thf-Av-Kai" id="Hhc-g7-uJH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="대학 세부 정보" id="tqK-N3-SmS"/>
+                    <navigationItem key="navigationItem" title="대학교 리스트" id="tqK-N3-SmS">
+                        <barButtonItem key="leftBarButtonItem" title="이전으로" id="p37-8l-LQ0">
+                            <connections>
+                                <segue destination="AqL-vp-UXp" kind="unwind" unwindAction="backToPickerViewControllerWithSegue:" id="7MP-s6-fPl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWT-EH-eV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AqL-vp-UXp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3789.84375" y="131.8359375"/>
         </scene>
         <!--경기도 대학 정보 조회-->
         <scene sceneID="1Z9-AZ-t83">
             <objects>
-                <viewController id="FDH-GP-xbT" sceneMemberID="viewController">
+                <viewController id="FDH-GP-xbT" customClass="ViewController" customModule="UniversityInfomation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LiF-8c-fxl">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
