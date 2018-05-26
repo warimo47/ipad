@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController, XMLParserDelegate
 {
+    
+    
     var parser = XMLParser()
     
     var posts = NSMutableArray()
@@ -102,7 +104,7 @@ class TableViewController: UITableViewController, XMLParserDelegate
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityName", for: indexPath)
         
         cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "FACLT_NM")
             as! NSString as String
