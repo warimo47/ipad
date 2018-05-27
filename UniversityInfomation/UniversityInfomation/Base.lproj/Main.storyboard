@@ -92,6 +92,11 @@
                                 <segue destination="AqL-vp-UXp" kind="unwind" unwindAction="backToPickerViewControllerWithSegue:" id="7MP-s6-fPl"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="지도 표시" id="Yoa-Y5-D7K">
+                            <connections>
+                                <segue destination="SSw-od-Cig" kind="show" identifier="segueToMapView" id="I8R-XN-gQ3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWT-EH-eV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,6 +131,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2q-0x-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4619" y="132"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="iNa-YN-QKT">
+            <objects>
+                <viewController id="SSw-od-Cig" customClass="MapViewController" customModule="UniversityInfomation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4G-X8-5LV">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NZY-v6-Jtx">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QYZ-Yz-yfE"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="NZY-v6-Jtx" id="I11-41-u4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0R-yM-0su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3789.84375" y="837.890625"/>
         </scene>
         <!--경기도 대학 정보 조회-->
         <scene sceneID="1Z9-AZ-t83">

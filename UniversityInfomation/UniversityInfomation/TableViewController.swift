@@ -10,8 +10,6 @@ import UIKit
 
 class TableViewController: UITableViewController, XMLParserDelegate
 {
-    
-    
     var parser = XMLParser()
     
     var posts = NSMutableArray()
@@ -20,6 +18,12 @@ class TableViewController: UITableViewController, XMLParserDelegate
     var element = NSString()
     
     var UniversityName = NSMutableString()
+    var Addr = NSMutableString()
+    var XPos = NSMutableString()
+    var YPos = NSMutableString()
+    
+    var MapX = 0.0
+    var MapY = 0.0
     
     var strUniPosUrl = "https://openapi.gg.go.kr/Jnclluniv?key=6ec3d4fbb5234452be28d5868db20223&psize=300"
     
@@ -45,6 +49,12 @@ class TableViewController: UITableViewController, XMLParserDelegate
             elements = [ : ]
             UniversityName = NSMutableString()
             UniversityName = ""
+            Addr = NSMutableString()
+            Addr = ""
+            XPos = NSMutableString()
+            XPos = ""
+            YPos = NSMutableString()
+            YPos = ""
         }
     }
     
@@ -53,6 +63,18 @@ class TableViewController: UITableViewController, XMLParserDelegate
         if element.isEqual(to: "FACLT_NM")
         {
             UniversityName.append(string)
+        }
+        else if element.isEqual(to: "REFINE_ROADNM_ADDR")
+        {
+            Addr.append(string)
+        }
+        else if element.isEqual(to: "REFINE_WGS84_LAT")
+        {
+            XPos.append(string)
+        }
+        else if element.isEqual(to: "REFINE_WGS84_LOGT")
+        {
+            YPos.append(string)
         }
     }
     
@@ -63,6 +85,21 @@ class TableViewController: UITableViewController, XMLParserDelegate
             if !UniversityName.isEqual(nil)
             {
                 elements.setObject(UniversityName, forKey: "FACLT_NM" as NSCopying)
+            }
+            
+            if !Addr.isEqual(nil)
+            {
+                elements.setObject(Addr, forKey: "REFINE_ROADNM_ADDR" as NSCopying)
+            }
+            
+            if !XPos.isEqual(nil)
+            {
+                elements.setObject(XPos, forKey: "REFINE_WGS84_LAT" as NSCopying)
+            }
+            
+            if !YPos.isEqual(nil)
+            {
+                elements.setObject(YPos, forKey: "REFINE_WGS84_LOGT" as NSCopying)
             }
             
             posts.add(elements)
@@ -110,6 +147,19 @@ class TableViewController: UITableViewController, XMLParserDelegate
             as! NSString as String
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "segueToMapView"
+        {
+            if let mapViewController = segue.destination as? MapViewController
+            {
+                mapViewController.posts = posts
+                mapViewController.MapX = MapX
+                mapViewController.MapY = MapY
+            }
+        }
     }
 
 }
