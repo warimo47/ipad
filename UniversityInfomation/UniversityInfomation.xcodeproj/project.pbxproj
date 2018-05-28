@@ -13,6 +13,7 @@
 		A17F84D820A41B0D0005A81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17F84D720A41B0D0005A81C /* Assets.xcassets */; };
 		A17F84DB20A41B0D0005A81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17F84D920A41B0D0005A81C /* LaunchScreen.storyboard */; };
 		A1A1AAE120AA796800B25BE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A1AAE020AA796800B25BE8 /* ViewController.swift */; };
+		A1B9EC2020BC244600998CDD /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B9EC1F20BC244600998CDD /* DetailTableViewController.swift */; };
 		A1BB3D6020BAEB9900FD1890 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB3D5F20BAEB9900FD1890 /* MapViewController.swift */; };
 		A1BB3D6220BAF84200FD1890 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB3D6120BAF84200FD1890 /* University.swift */; };
 		A1BF033D20B5C1F00008B818 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF033C20B5C1F00008B818 /* TableViewController.swift */; };
@@ -27,6 +28,7 @@
 		A17F84DA20A41B0D0005A81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A17F84DC20A41B0D0005A81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1A1AAE020AA796800B25BE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1B9EC1F20BC244600998CDD /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		A1BB3D5F20BAEB9900FD1890 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A1BB3D6120BAF84200FD1890 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		A1BF033C20B5C1F00008B818 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				A1BF033C20B5C1F00008B818 /* TableViewController.swift */,
 				A1BB3D5F20BAEB9900FD1890 /* MapViewController.swift */,
 				A1BB3D6120BAF84200FD1890 /* University.swift */,
+				A1B9EC1F20BC244600998CDD /* DetailTableViewController.swift */,
 			);
 			path = UniversityInfomation;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B9EC2020BC244600998CDD /* DetailTableViewController.swift in Sources */,
 				A1A1AAE120AA796800B25BE8 /* ViewController.swift in Sources */,
 				A17F84D320A41B0D0005A81C /* PickerViewController.swift in Sources */,
 				A17F84D120A41B0D0005A81C /* AppDelegate.swift in Sources */,
