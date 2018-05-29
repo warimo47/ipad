@@ -77,7 +77,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UBA-Qe-asG" kind="show" id="O6l-oe-hAG"/>
+                                    <segue destination="UBA-Qe-asG" kind="show" identifier="segueToDetailView" id="O6l-oe-hAG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -18,6 +18,12 @@ class TableViewController: UITableViewController, XMLParserDelegate
     var element = NSString()
     
     var UniversityName = NSMutableString()
+    var SIGUN_NM = NSMutableString()
+    var SCHOOL_DIV_NM = NSMutableString()
+    var PLVTINST_DIV_NM = NSMutableString()
+    var REFINE_LOTNO_ADDR = NSMutableString()
+    var REFINE_ROADNM_ADDR = NSMutableString()
+    var REFINE_ZIP_CD = NSMutableString()
     var Addr = NSMutableString()
     var XPos = NSMutableString()
     var YPos = NSMutableString()
@@ -49,6 +55,18 @@ class TableViewController: UITableViewController, XMLParserDelegate
             elements = [ : ]
             UniversityName = NSMutableString()
             UniversityName = ""
+            SIGUN_NM = NSMutableString()
+            SIGUN_NM = ""
+            SCHOOL_DIV_NM = NSMutableString()
+            SCHOOL_DIV_NM = ""
+            PLVTINST_DIV_NM = NSMutableString()
+            PLVTINST_DIV_NM = ""
+            REFINE_LOTNO_ADDR = NSMutableString()
+            REFINE_LOTNO_ADDR = ""
+            REFINE_ROADNM_ADDR = NSMutableString()
+            REFINE_ROADNM_ADDR = ""
+            REFINE_ZIP_CD = NSMutableString()
+            REFINE_ZIP_CD = ""
             Addr = NSMutableString()
             Addr = ""
             XPos = NSMutableString()
@@ -64,9 +82,30 @@ class TableViewController: UITableViewController, XMLParserDelegate
         {
             UniversityName.append(string)
         }
+        else if element.isEqual(to: "SIGUN_NM")
+        {
+            SIGUN_NM.append(string)
+        }
+        else if element.isEqual(to: "SCHOOL_DIV_NM")
+        {
+            SCHOOL_DIV_NM.append(string)
+        }
+        else if element.isEqual(to: "PLVTINST_DIV_NM")
+        {
+            PLVTINST_DIV_NM.append(string)
+        }
+        else if element.isEqual(to: "REFINE_LOTNO_ADDR")
+        {
+            REFINE_LOTNO_ADDR.append(string)
+        }
         else if element.isEqual(to: "REFINE_ROADNM_ADDR")
         {
             Addr.append(string)
+            REFINE_ROADNM_ADDR.append(string)
+        }
+        else if element.isEqual(to: "REFINE_ZIP_CD")
+        {
+            REFINE_ZIP_CD.append(string)
         }
         else if element.isEqual(to: "REFINE_WGS84_LAT")
         {
@@ -85,6 +124,36 @@ class TableViewController: UITableViewController, XMLParserDelegate
             if !UniversityName.isEqual(nil)
             {
                 elements.setObject(UniversityName, forKey: "FACLT_NM" as NSCopying)
+            }
+            
+            if !SIGUN_NM.isEqual(nil)
+            {
+                elements.setObject(SIGUN_NM, forKey: "SIGUN_NM" as NSCopying)
+            }
+            
+            if !SCHOOL_DIV_NM.isEqual(nil)
+            {
+                elements.setObject(SCHOOL_DIV_NM, forKey: "SCHOOL_DIV_NM" as NSCopying)
+            }
+            
+            if !PLVTINST_DIV_NM.isEqual(nil)
+            {
+                elements.setObject(PLVTINST_DIV_NM, forKey: "PLVTINST_DIV_NM" as NSCopying)
+            }
+            
+            if !REFINE_LOTNO_ADDR.isEqual(nil)
+            {
+                elements.setObject(REFINE_LOTNO_ADDR, forKey: "REFINE_LOTNO_ADDR" as NSCopying)
+            }
+            
+            if !REFINE_ROADNM_ADDR.isEqual(nil)
+            {
+                elements.setObject(REFINE_ROADNM_ADDR, forKey: "REFINE_ROADNM_ADDR" as NSCopying)
+            }
+            
+            if !REFINE_ZIP_CD.isEqual(nil)
+            {
+                elements.setObject(REFINE_ZIP_CD, forKey: "REFINE_ZIP_CD" as NSCopying)
             }
             
             if !Addr.isEqual(nil)
@@ -160,6 +229,20 @@ class TableViewController: UITableViewController, XMLParserDelegate
                 mapViewController.MapY = MapY
             }
         }
+        
+        if segue.identifier == "segueToDetailView"
+        {
+            if let detailTableViewController = segue.destination as? DetailTableViewController
+            {
+                detailTableViewController.posts =
+                    [UniversityName as String,
+                     SIGUN_NM as String,
+                     SCHOOL_DIV_NM as String,
+                     PLVTINST_DIV_NM as String,
+                     REFINE_LOTNO_ADDR as String,
+                     REFINE_ROADNM_ADDR as String,
+                     REFINE_ZIP_CD as String]
+            }
+        }
     }
-
 }
