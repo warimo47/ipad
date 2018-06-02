@@ -17,6 +17,7 @@
 		A1BB3D6020BAEB9900FD1890 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB3D5F20BAEB9900FD1890 /* MapViewController.swift */; };
 		A1BB3D6220BAF84200FD1890 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB3D6120BAF84200FD1890 /* University.swift */; };
 		A1BF033D20B5C1F00008B818 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF033C20B5C1F00008B818 /* TableViewController.swift */; };
+		A1D9EBC220BD5AD7000C4515 /* Info Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D9EBC120BD5AD7000C4515 /* Info Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A1BB3D5F20BAEB9900FD1890 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A1BB3D6120BAF84200FD1890 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		A1BF033C20B5C1F00008B818 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A1D9EBC120BD5AD7000C4515 /* Info Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info Icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		A17F84CF20A41B0D0005A81C /* UniversityInfomation */ = {
 			isa = PBXGroup;
 			children = (
+				A1D9EBC120BD5AD7000C4515 /* Info Icon.png */,
 				A17F84D020A41B0D0005A81C /* AppDelegate.swift */,
 				A17F84D220A41B0D0005A81C /* PickerViewController.swift */,
 				A17F84D420A41B0D0005A81C /* Main.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A17F84DB20A41B0D0005A81C /* LaunchScreen.storyboard in Resources */,
+				A1D9EBC220BD5AD7000C4515 /* Info Icon.png in Resources */,
 				A17F84D820A41B0D0005A81C /* Assets.xcassets in Resources */,
 				A17F84D620A41B0D0005A81C /* Main.storyboard in Resources */,
 			);
