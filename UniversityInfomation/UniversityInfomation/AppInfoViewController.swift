@@ -13,6 +13,8 @@ class AppInfoViewController: UIViewController
     @IBOutlet var developerInfoView: UITextView!
     @IBOutlet var appInfoView: UITextView!
     
+    @IBOutlet var phoneCallButton: UIButton?
+    
     var audioController: AudioController
     
     var isAppInfoViewShowing = true
@@ -29,6 +31,8 @@ class AppInfoViewController: UIViewController
                               options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
                               completion: nil)
             self.title = "개발자 정보"
+            phoneCallButton = UIButton(frame: CGRect(x: 400, y: 400, width: 50, height: 50))
+            
         }
         else
         {
@@ -38,6 +42,7 @@ class AppInfoViewController: UIViewController
                              options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews],
                              completion: nil)
             self.title = "어플 정보"
+            phoneCallButton = nil
         }
         
         isAppInfoViewShowing = !isAppInfoViewShowing
@@ -47,6 +52,8 @@ class AppInfoViewController: UIViewController
     {
         audioController = AudioController()
         audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
+        
+        phoneCallButton = nil
         
         super.init(coder: aDecoder)
     }

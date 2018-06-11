@@ -25,7 +25,7 @@ class ViewController: UIViewController
     {
         audioController.playerEffect(name: SoundDing)
         
-        let explore = ExplodeView(frame: CGRect(x: (gesture?.location(in: myView).x)!, y: (gesture?.location(in: myView).y)!, width: 5, height: 5))
+        let explore = ExplodeView(frame: CGRect(x: (gesture?.location(in: myView).x)!, y: (gesture?.location(in: myView).y)!, width: 1, height: 1))
         
         myView.addSubview(explore)
         myView.sendSubview(toBack: explore)
