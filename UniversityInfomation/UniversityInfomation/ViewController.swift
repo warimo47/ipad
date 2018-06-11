@@ -10,6 +10,27 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    var audioController: AudioController
+    @IBOutlet var myView: UIView!
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        audioController = AudioController()
+        audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
+        
+        super.init(coder: aDecoder)
+    }
+    
+    @IBAction func TapView(gesture: UITapGestureRecognizer?)
+    {
+        audioController.playerEffect(name: SoundDing)
+        
+        let explore = ExplodeView(frame: CGRect(x: (gesture?.location(in: myView).x)!, y: (gesture?.location(in: myView).y)!, width: 5, height: 5))
+        
+        myView.addSubview(explore)
+        myView.sendSubview(toBack: explore)
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

@@ -13,10 +13,14 @@ class AppInfoViewController: UIViewController
     @IBOutlet var developerInfoView: UITextView!
     @IBOutlet var appInfoView: UITextView!
     
+    var audioController: AudioController
+    
     var isAppInfoViewShowing = true
     
     @IBAction func InfoViewToggle(gesture: UITapGestureRecognizer?)
     {
+        audioController.playerEffect(name: SoundWin)
+        
         if isAppInfoViewShowing
         {
             UIView.transition(from: appInfoView,
@@ -37,6 +41,14 @@ class AppInfoViewController: UIViewController
         }
         
         isAppInfoViewShowing = !isAppInfoViewShowing
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        audioController = AudioController()
+        audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
+        
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad()

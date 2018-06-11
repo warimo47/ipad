@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14260FE20CE0ABD00C0EC63 /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A14260FB20CE0ABD00C0EC63 /* wrong.m4a */; };
+		A14260FF20CE0ABD00C0EC63 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A14260FC20CE0ABD00C0EC63 /* ding.mp3 */; };
+		A142610020CE0ABD00C0EC63 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A14260FD20CE0ABD00C0EC63 /* win.mp3 */; };
+		A142610220CE0B2F00C0EC63 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142610120CE0B2F00C0EC63 /* AudioController.swift */; };
+		A142610420CE0C0100C0EC63 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142610320CE0C0100C0EC63 /* Config.swift */; };
+		A142610720CE160F00C0EC63 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A142610620CE160F00C0EC63 /* particle.png */; };
+		A142610920CE16A400C0EC63 /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142610820CE16A400C0EC63 /* ExplodeView.swift */; };
+		A142610C20CE1BC800C0EC63 /* LocationSearchIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A142610B20CE1BC800C0EC63 /* LocationSearchIcon.jpg */; };
 		A17F84D120A41B0D0005A81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F84D020A41B0D0005A81C /* AppDelegate.swift */; };
 		A17F84D320A41B0D0005A81C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F84D220A41B0D0005A81C /* PickerViewController.swift */; };
 		A17F84D620A41B0D0005A81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17F84D420A41B0D0005A81C /* Main.storyboard */; };
@@ -22,6 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A14260FB20CE0ABD00C0EC63 /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
+		A14260FC20CE0ABD00C0EC63 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
+		A14260FD20CE0ABD00C0EC63 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		A142610120CE0B2F00C0EC63 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		A142610320CE0C0100C0EC63 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A142610620CE160F00C0EC63 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
+		A142610820CE16A400C0EC63 /* ExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplodeView.swift; sourceTree = "<group>"; };
+		A142610B20CE1BC800C0EC63 /* LocationSearchIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LocationSearchIcon.jpg; sourceTree = "<group>"; };
 		A17F84CD20A41B0D0005A81C /* UniversityInfomation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversityInfomation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F84D020A41B0D0005A81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17F84D220A41B0D0005A81C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14260FA20CE0ABD00C0EC63 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A14260FB20CE0ABD00C0EC63 /* wrong.m4a */,
+				A14260FC20CE0ABD00C0EC63 /* ding.mp3 */,
+				A14260FD20CE0ABD00C0EC63 /* win.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A142610520CE15DB00C0EC63 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				A142610620CE160F00C0EC63 /* particle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		A142610A20CE1B7000C0EC63 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A142610B20CE1BC800C0EC63 /* LocationSearchIcon.jpg */,
+				A1D9EBC120BD5AD7000C4515 /* Info Icon.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		A17F84C420A41B0D0005A81C = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +111,9 @@
 		A17F84CF20A41B0D0005A81C /* UniversityInfomation */ = {
 			isa = PBXGroup;
 			children = (
-				A1D9EBC120BD5AD7000C4515 /* Info Icon.png */,
+				A142610A20CE1B7000C0EC63 /* Image */,
+				A142610520CE15DB00C0EC63 /* Particles */,
+				A14260FA20CE0ABD00C0EC63 /* Audio */,
 				A17F84D020A41B0D0005A81C /* AppDelegate.swift */,
 				A17F84D220A41B0D0005A81C /* PickerViewController.swift */,
 				A17F84D420A41B0D0005A81C /* Main.storyboard */,
@@ -81,6 +126,9 @@
 				A1BB3D6120BAF84200FD1890 /* University.swift */,
 				A1B9EC1F20BC244600998CDD /* DetailTableViewController.swift */,
 				A19B66AC20C6900500AA17B3 /* AppInfoViewController.swift */,
+				A142610120CE0B2F00C0EC63 /* AudioController.swift */,
+				A142610320CE0C0100C0EC63 /* Config.swift */,
+				A142610820CE16A400C0EC63 /* ExplodeView.swift */,
 			);
 			path = UniversityInfomation;
 			sourceTree = "<group>";
@@ -145,7 +193,12 @@
 			files = (
 				A17F84DB20A41B0D0005A81C /* LaunchScreen.storyboard in Resources */,
 				A1D9EBC220BD5AD7000C4515 /* Info Icon.png in Resources */,
+				A142610020CE0ABD00C0EC63 /* win.mp3 in Resources */,
+				A142610720CE160F00C0EC63 /* particle.png in Resources */,
+				A14260FF20CE0ABD00C0EC63 /* ding.mp3 in Resources */,
 				A17F84D820A41B0D0005A81C /* Assets.xcassets in Resources */,
+				A142610C20CE1BC800C0EC63 /* LocationSearchIcon.jpg in Resources */,
+				A14260FE20CE0ABD00C0EC63 /* wrong.m4a in Resources */,
 				A17F84D620A41B0D0005A81C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,11 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B9EC2020BC244600998CDD /* DetailTableViewController.swift in Sources */,
+				A142610220CE0B2F00C0EC63 /* AudioController.swift in Sources */,
 				A1A1AAE120AA796800B25BE8 /* ViewController.swift in Sources */,
 				A19B66AD20C6900500AA17B3 /* AppInfoViewController.swift in Sources */,
 				A17F84D320A41B0D0005A81C /* PickerViewController.swift in Sources */,
 				A17F84D120A41B0D0005A81C /* AppDelegate.swift in Sources */,
 				A1BB3D6020BAEB9900FD1890 /* MapViewController.swift in Sources */,
+				A142610920CE16A400C0EC63 /* ExplodeView.swift in Sources */,
+				A142610420CE0C0100C0EC63 /* Config.swift in Sources */,
 				A1BF033D20B5C1F00008B818 /* TableViewController.swift in Sources */,
 				A1BB3D6220BAF84200FD1890 /* University.swift in Sources */,
 			);
